@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acquire Movement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="sticky-header">
+    <nav>
+      <a class="logo-wrapper" href="#">
+        <img class="logo" src="assets/logos/acquire-rights.png" alt="Acquire Movement">
+        <span>Acquire Rights</span>
+      </a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Certifications</a></li>
+        <li><a href="#">Donators</a></li>
+        <li><a href="#" class="donate-btn">Donate Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="section-content">
+        <div class="content">
+          <h1 class="about-title">About Acquire Movement</h1>
+          <p class="about-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s.</p>
+          <ul class="check-list">
+            <li class="check-list-item">
+              <img src="assets/icons/check.png" alt="Check">
+              <span>Lorem ipsum is simply dummy text</span>
+            </li>
+            <li class="check-list-item">
+              <img src="assets/icons/check.png" alt="Check">
+              <span>Lorem ipsum is simply dummy text</span>
+            </li>
+            <li class="check-list-item">
+              <img src="assets/icons/cross.png" alt="Check">
+              <span>Lorem ipsum is simply dummy text</span>
+            </li>
+            <li class="check-list-item">
+              <img src="assets/icons/cross.png" alt="Check">
+              <span>Lorem ipsum is simply dummy text</span>
+            </li>
+          </ul>
+          <button class="square-button">Read More</button>
+        </div>
+        <img class="header-image" src="assets/images/bg.jpg" alt="About Acquire Movement">
+      </div>
+    </section>
+
+    <section id="donations">
+      <div class="section-content donations">
+        <h1 class="section-title">Donations</h1>
+        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s.</p>
+        <div class="donation-progress">
+          <div class="donation-progress-info">
+            <div class="donation-progress-info-item">raised <span class="amount" id="raisedAmount">$255,465.46</span></div>
+            <div class="donation-progress-info-item">yearly goal <span class="amount" id="goalAmount">$300,000.00</span></div>
+          </div>
+          <progress id="donationProgress" value="0" max="100">0%</progress>
+        </div>
+        <div class="donors-list">
+          <div class="donors-column left-column"></div>
+          <div class="donors-column right-column"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="details">
+      <div class="section-content details">
+        <h1 class="section-title">More Details</h1>
+        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s.</p>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Subscription</th>
+              <th>Ownership</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Table rows will be inserted here by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="certified-products">
+      <div class="section-content certified-products">
+        <h1 class="section-title text-center" style="margin-bottom: 0;">Certificated Products & Companies</h1>
+        <img class="wave-image" src="assets/images/Icoon_Wave_RGB.png" alt="Certificated Products & Companies">
+        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <div class="product-grid">
+          <!-- Product images will be added dynamically with JavaScript -->
+        </div>
+        <button class="square-button" style="margin-top: 48px;">show more</button>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="section-content testimonials">
+        <div class="carousel">
+          <div class="carousel-inner">
+            <!-- Testimonials will be added dynamically with JavaScript -->
+          </div>
+        </div>
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Why Go</h3>
+      <ul>
+        <li><a href="#">Use Cases</a></li>
+        <li><a href="#">Case Studies</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Get Started</h3>
+      <ul>
+        <li><a href="#">Playground</a></li>
+        <li><a href="#">Tour</a></li>
+        <li><a href="#">Stack Overflow</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>Packages</h3>
+      <ul>
+        <li><a href="#">Standard Library</a></li>
+        <li><a href="#">About Go Packages</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h3>About</h3>
+      <ul>
+        <li><a href="#">Download</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Issue Tracker</a></li>
+        <li><a href="#">Release Notes</a></li>
+        <li><a href="#">Brand Guidelines</a></li>
+        <li><a href="#">Code of Conduct</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
