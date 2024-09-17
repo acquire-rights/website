@@ -9,12 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
   <header class="sticky-header">
-    <nav>
+    <nav class="navbar">
       <a class="logo-wrapper" href="#">
         <img class="logo" src="assets/logos/acquire-rights.png" alt="Acquire Movement">
         <span>Acquire Rights</span>
@@ -27,6 +28,22 @@
         <li><a href="#" class="donate-btn">Donate Now</a></li>
       </ul>
     </nav>
+    <div class="topnav">
+      <a href="#home" class="active">
+        <img class="logo" src="assets/logos/acquire-rights.png" alt="Acquire Movement">
+        <h3>Acquire Rights</h3>
+      </a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="openHamburgerMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   </header>
 
   <main>
@@ -34,7 +51,8 @@
       <div class="section-content">
         <div class="content">
           <h1 class="about-title">About Acquire Movement</h1>
-          <p class="about-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          <p class="about-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's
             standard dummy text ever since the 1500s.</p>
           <ul class="check-list">
             <li class="check-list-item">
@@ -63,12 +81,15 @@
     <section id="donations">
       <div class="section-content donations">
         <h1 class="section-title">Donations</h1>
-        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's
           standard dummy text ever since the 1500s.</p>
         <div class="donation-progress">
           <div class="donation-progress-info">
-            <div class="donation-progress-info-item">raised <span class="amount" id="raisedAmount">$255,465.46</span></div>
-            <div class="donation-progress-info-item">yearly goal <span class="amount" id="goalAmount">$300,000.00</span></div>
+            <div class="donation-progress-info-item">raised <span class="amount" id="raisedAmount">$255,465.46</span>
+            </div>
+            <div class="donation-progress-info-item">yearly goal <span class="amount" id="goalAmount">$300,000.00</span>
+            </div>
           </div>
           <progress id="donationProgress" value="0" max="100">0%</progress>
         </div>
@@ -82,7 +103,8 @@
     <section id="details">
       <div class="section-content details">
         <h1 class="section-title">More Details</h1>
-        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
+          Ipsum has been the industry's
           standard dummy text ever since the 1500s.</p>
         <table>
           <thead>

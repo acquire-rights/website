@@ -6,8 +6,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --mobile-breakpoint: 768px;
-  --tablet-breakpoint: 1024px;
   --text-dark: #0D0D12;
   --text-color: #2F3349;
   --text-muted: #36394A;
@@ -177,7 +175,7 @@ ul {
 .check-list-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;  
+  gap: 0.5rem;
 }
 
 .check-list-item img {
@@ -479,12 +477,12 @@ table {
 }
 
 .row-title {
-    color: var(--text-muted);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
+  color: var(--text-muted);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
 }
 
 th,
@@ -529,57 +527,98 @@ th {
   color: green;
 }
 
-@media (max-width: 1140px) {
-  .section-content {
-    padding: 0 20px;
-  }
+.topnav {
+  visibility: hidden;
 }
 
-@media (max-width: var(--tablet-breakpoint)) {
-  nav {
-    flex-direction: column;
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .topnav {
+    visibility: visible;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .topnav img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .topnav #myLinks {
+    display: none;
+  }
+
+  /* Style navigation menu links */
+  .topnav a {
+    color: var(--text-muted);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
     align-items: center;
   }
 
-  nav ul {
-    margin-top: 1rem;
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
-  .section-content {
-    flex-direction: column;
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #fff;
+    color: black;
   }
 
-  #about .content {
-    padding-right: 0;
-    margin-bottom: 2rem;
+  /* Style the active link (or home/logo) */
+  .active {
+    display: flex;
+    background-color: white;
+    color: white;
+    gap: 0.5rem;
+  }
+
+  .active h3 {
+    margin: 0;
   }
 
   .header-image {
-    max-width: 100%;
+    display: none;
   }
 
   .donors-list {
     flex-direction: column;
-    gap: 30px;
+    gap: 0;
   }
 
-  .donors-column {
-    width: 100%;
+  .donors-list p {
+    margin: 8px;
+    justify-content: center;
   }
 
   .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-}
-
-@media (max-width: var(--mobile-breakpoint)) {
-  nav ul {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    column-gap: 16px;
+    row-gap: 32px;
+    width: 100%;
+    margin-top: 56px;
     align-items: center;
+    justify-content: center;
   }
 
-  nav ul li {
-    margin: 0.5rem 0;
+  .next {
+    right: -20px;
+  }
+
+  .prev {
+    left: -20px;
   }
 
   h1 {
@@ -598,12 +637,14 @@ th {
   }
 
   footer {
+    padding: 24px;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    gap: 20px;
   }
 
   .footer-section {
-    display: block;
-    width: 100%;
-    margin-bottom: 2rem;
+    break-inside: avoid;
   }
 }
