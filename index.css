@@ -528,7 +528,7 @@ th {
 }
 
 .topnav {
-  visibility: hidden;
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -537,7 +537,7 @@ th {
   }
 
   .topnav {
-    visibility: visible;
+    display: block;
     overflow: hidden;
     background-color: #fff;
     position: relative;
