@@ -23,7 +23,7 @@
       <ul>
         <li><a href="/index.html">Home</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="#">Certifications</a></li>
+        <li><a href="/certifications.html">Certifications</a></li>
         <li><a href="#">Donators</a></li>
         <li><a href="#" class="donate-btn">Donate Now</a></li>
       </ul>
@@ -47,78 +47,57 @@
   </header>
 
   <main>
-    <section id="about">
+    <section id="about" class="about-section">
       <div class="section-content">
         <div class="content">
           <h1 class="about-title">About Acquire Movement</h1>
-          <p class="about-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's
-            standard dummy text ever since the 1500s.</p>
-          <ul class="check-list">
-            <li class="check-list-item">
-              <img src="assets/icons/check.png" alt="Check">
-              <span>Lorem ipsum is simply dummy text</span>
-            </li>
-            <li class="check-list-item">
-              <img src="assets/icons/check.png" alt="Check">
-              <span>Lorem ipsum is simply dummy text</span>
-            </li>
-            <li class="check-list-item">
-              <img src="assets/icons/cross.png" alt="Check">
-              <span>Lorem ipsum is simply dummy text</span>
-            </li>
-            <li class="check-list-item">
-              <img src="assets/icons/cross.png" alt="Check">
-              <span>Lorem ipsum is simply dummy text</span>
-            </li>
-          </ul>
-          <button class="square-button">Read More</button>
-        </div>
-        <img class="header-image" src="assets/images/bg.jpg" alt="About Acquire Movement">
-      </div>
-    </section>
-
-    <section id="donations">
-      <div class="section-content donations">
-        <h1 class="section-title">Donations</h1>
-        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's
-          standard dummy text ever since the 1500s.</p>
-        <div class="donation-progress">
-          <div class="donation-progress-info">
-            <div class="donation-progress-info-item">raised <span class="amount" id="raisedAmount">$255,465.46</span>
-            </div>
-            <div class="donation-progress-info-item">yearly goal <span class="amount" id="goalAmount">$300,000.00</span>
-            </div>
+          <div class="certificate-hero">
+            <p class="about-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's
+              standard dummy text ever since the 1500s.</p>
+            <button class="big-square-button" id="openModal">Get Certificate</button>
           </div>
-          <progress id="donationProgress" value="0" max="100">0%</progress>
-        </div>
-        <div class="donors-list">
-          <div class="donors-column left-column"></div>
-          <div class="donors-column right-column"></div>
         </div>
       </div>
     </section>
-
-    <section id="details">
-      <div class="section-content details">
-        <h1 class="section-title">More Details</h1>
-        <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's
-          standard dummy text ever since the 1500s.</p>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Subscription</th>
-              <th>Ownership</th>
-            </tr>
-          </thead>
-          <tbody id="tableBody">
-            <!-- Table rows will be inserted here by JavaScript -->
-          </tbody>
-        </table>
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M7.29289 7.29289C7.68342 6.90237 8.31658 6.90237 8.70711 7.29289L12 10.5858L15.2929 7.29289C15.6834 6.90237 16.3166 6.90237 16.7071 7.29289C17.0976 7.68342 17.0976 8.31658 16.7071 8.70711L13.4142 12L16.7071 15.2929C17.0976 15.6834 17.0976 16.3166 16.7071 16.7071C16.3166 17.0976 15.6834 17.0976 15.2929 16.7071L12 13.4142L8.70711 16.7071C8.31658 17.0976 7.68342 17.0976 7.29289 16.7071C6.90237 16.3166 6.90237 15.6834 7.29289 15.2929L10.5858 12L7.29289 8.70711C6.90237 8.31658 6.90237 7.68342 7.29289 7.29289Z"
+              fill="#818898" />
+          </svg>
+        </span>
+        <div class="modal-content-header">
+          <h2>Get Certificate</h2>
+          <p>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s.</p>
+        </div>
+        <div class="modal-content-body">
+          <form id="certificateForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="product1">Product Name 1:</label>
+            <input type="text" id="product1" name="product1" required>
+          
+            <label for="product2">Product Name 2:</label>
+            <input type="text" id="product2" name="product2" required>
+          
+            <label for="product3">Product Name 3:</label>
+            <input type="text" id="product3" name="product3" required>
+          
+            <button class="square-button" style="margin-top: 16px;" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
+    </div>
+
+    <section id="about-us">
+      <div class="section-content about-us">
+       
     </section>
 
     <section id="certified-products">
@@ -193,11 +172,8 @@
 
   <script src="index.js"></script>
   <script src="scripts/stickyHeader.js"></script>
-  <script src="scripts/progressBar.js"></script>
-  <script src="scripts/donorList.js"></script>
-  <script src="scripts/detailsTable.js"></script>
   <script src="scripts/productGrid.js"></script>
   <script src="scripts/carousel.js"></script>
+  <script src="scripts/certificateModal.js"></script>
 </body>
-
 </html>
