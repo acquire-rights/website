@@ -1,3 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply flex p-3 items-center gap-2 self-stretch rounded-lg border border-[#ECEFF3] bg-white mb-4;
+  }
+}
+
 :root {
   font-family: "Urbanist", sans-serif;
   color: #212529;
@@ -428,6 +438,7 @@ footer {
 .product-image {
   width: 151px;
   object-fit: contain;
+  margin: 0 auto;
 }
 
 .carousel {
@@ -648,25 +659,6 @@ form {
   flex-direction: column;
 }
 
-form label {
-  color: var(--text-loud-900, #0D0D12);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-}
-
-form input {
-  display: flex;
-  padding: 8px 12px;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 8px;
-  border: 1px solid var(--border-normal-50, #ECEFF3);
-  background: #FFF;
-  margin-bottom: 16px;
-}
 
 @media (max-width: 768px) {
   .navbar {

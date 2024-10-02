@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="index.css">
+  <link href="./output.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,12 +47,14 @@
   </header>
 
   <main>
-    <section id="about" class="about-section">
+    <section id="about" class="!bg-mold-green">
       <div class="section-content">
         <div class="content">
           <h1 class="about-title">About Acquire Movement</h1>
           <div class="certificate-hero">
             <p class="about-text">Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's
+              standard dummy text ever since the 1500s. Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's
               standard dummy text ever since the 1500s.</p>
             <button class="big-square-button" id="openModal">Get Certificate</button>
@@ -76,39 +78,56 @@
           dummy text ever since the 1500s.</p>
         </div>
         <div class="modal-content-body">
-          <form id="certificateForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-          
-            <label for="product1">Product Name 1:</label>
-            <input type="text" id="product1" name="product1" required>
-          
-            <label for="product2">Product Name 2:</label>
-            <input type="text" id="product2" name="product2" required>
-          
-            <label for="product3">Product Name 3:</label>
-            <input type="text" id="product3" name="product3" required>
-          
-            <button class="square-button" style="margin-top: 16px;" type="submit">Submit</button>
-          </form>
+          <form id="certificateForm" class="space-y-4"></form>
+            <div class="space-y-4">
+                <div>
+                    <label for="name" class="block text-text-loud-900 text-sm font-medium leading-5">Name:</label>
+                    <input type="text" id="name" name="name" required class="form-input w-full">
+                </div>
+                <div>
+                    <label for="product1" class="block text-text-loud-900 text-sm font-medium leading-5">Product Name 1:</label>
+                    <input type="text" id="product1" name="product1" required class="form-input w-full">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <label for="product2" class="block text-text-loud-900 text-sm font-medium leading-5">Product Name 2:</label>
+                    <input type="text" id="product2" name="product2" required class="form-input w-full">
+                </div>
+                <div>
+                    <label for="product3" class="block text-text-loud-900 text-sm font-medium leading-5">Product Name 3:</label>
+                    <input type="text" id="product3" name="product3" required class="form-input w-full">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                  <label for="product2" class="block text-text-loud-900 text-sm font-medium leading-5">Product Name 2:</label>
+                  <input type="text" id="product2" name="product2" required class="form-input w-full">
+              </div>
+              <div>
+                  <label for="product3" class="block text-text-loud-900 text-sm font-medium leading-5">Product Name 3:</label>
+                  <input type="text" id="product3" name="product3" required class="form-input w-full">
+              </div>
+          </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50 transition duration-150 ease-in-out">
+                Submit
+            </button>
+        </form>
         </div>
       </div>
     </div>
-
-    <section id="about-us">
-      <div class="section-content about-us">
-       
-    </section>
 
     <section id="certified-products">
       <div class="section-content certified-products">
         <h1 class="section-title text-center" style="margin-bottom: 0;">Certificated Products & Companies</h1>
         <img class="wave-image" src="assets/images/Icoon_Wave_RGB.png" alt="Certificated Products & Companies">
         <p class="section-description">Lorem ipsum is simply dummy text of the printing and typesetting industry.</p>
-        <div class="product-grid">
+        <div class="search-container mt-[32px] mx-auto w-full">
+          <input class="flex items-center gap-2 self-stretch p-2 rounded-lg border border-[#ECEFF3] bg-white mb-4 focus:outline-none focus:ring-0 focus:border-[#ECEFF3] max-w-[300px] w-full mx-auto" type="text" id="searchInput" placeholder="Search...">
+        </div>
+        <div class="product-grid !gap-y-[100px]">
           <!-- Product images will be added dynamically with JavaScript -->
         </div>
-        <button class="square-button" style="margin-top: 48px;">show more</button>
       </div>
     </section>
 
